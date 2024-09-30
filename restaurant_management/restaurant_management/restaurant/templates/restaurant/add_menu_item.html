@@ -1,0 +1,7 @@
+<!-- templates/restaurant/add_menu_item.html -->
+<h2>Add Menu Item</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Menu Item</button>
+</form>

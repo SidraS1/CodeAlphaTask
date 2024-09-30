@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ event.name }}</title>
+</head>
+<body>
+    <h1>{{ event.name }}</h1>
+    <p>{{ event.description }}</p>
+    <p>Start Time: {{ event.start_time }}</p>
+    <p>End Time: {{ event.end_time }}</p>
+    <p>Location: {{ event.location }}</p>
+    {% if user.is_authenticated %}
+        <form method="post" action="{% url 'register_for_event' event.id %}">
+            {% csrf_token %}
+            <button type="submit">Register for this event</button>
+        </form>
+    {% endif %}
+</body>
+</html>

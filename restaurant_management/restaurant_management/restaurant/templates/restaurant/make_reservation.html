@@ -1,0 +1,7 @@
+<!-- templates/restaurant/make_reservation.html -->
+<h2>Make a Reservation</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Make Reservation</button>
+</form>

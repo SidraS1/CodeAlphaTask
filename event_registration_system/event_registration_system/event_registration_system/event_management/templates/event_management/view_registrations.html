@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Registrations</title>
+</head>
+<body>
+    <h1>My Registrations</h1>
+    <ul>
+        {% for registration in registrations %}
+            <li>
+                <a href="{% url 'event_detail' registration.event.id %}">
+                    {{ registration.event.name }} - {{ registration.event.start_time }}
+                </a>
+            </li>
+        {% empty %}
+            <li>You are not registered for any events.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

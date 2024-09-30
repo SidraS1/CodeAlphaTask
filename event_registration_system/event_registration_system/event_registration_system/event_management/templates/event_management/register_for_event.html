@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register for {{ event.name }}</title>
+</head>
+<body>
+    <h1>Register for {{ event.name }}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

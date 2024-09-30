@@ -1,0 +1,7 @@
+<!-- templates/restaurant/place_order.html -->
+<h2>Place an Order</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Place Order</button>
+</form>

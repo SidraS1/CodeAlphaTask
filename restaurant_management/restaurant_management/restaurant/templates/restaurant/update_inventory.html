@@ -1,0 +1,7 @@
+<!-- templates/restaurant/update_inventory.html -->
+<h2>Update Inventory Item</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update Inventory</button>
+</form>
